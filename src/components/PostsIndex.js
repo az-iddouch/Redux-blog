@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchPosts } from '../actions';
+import { Link } from 'react-router-dom';
 
 class PostsIndex extends Component {
   componentDidMount() {
@@ -23,7 +24,16 @@ class PostsIndex extends Component {
   render() {
     return (
       <div>
-        <h1 className="mb-5">Posts</h1>
+        <div className="d-flex mb-5">
+          <h1 className="">Posts</h1>
+          <Link
+            to="/posts/new"
+            type="button"
+            className="btn btn-primary ml-auto"
+          >
+            + Add post
+          </Link>
+        </div>
         <ul className="list-group">{this.renderPosts()} </ul>
       </div>
     );
