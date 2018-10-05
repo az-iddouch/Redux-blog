@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import PostsIndex from './components/PostsIndex';
 import Header from './components/Header';
 import NewPost from './components/NewPost';
+import ShowPost from './components/ShowPost';
 
 ReactDOM.render(
   <Provider store={store}>
@@ -17,6 +18,7 @@ ReactDOM.render(
           <Switch>
             <Route exact path="/" component={PostsIndex} />
             <Route path="/posts/new" component={NewPost} />
+            <Route path="/posts/:id" component={ShowPost} />
           </Switch>
         </div>
       </React.Fragment>

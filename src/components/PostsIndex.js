@@ -14,7 +14,9 @@ class PostsIndex extends Component {
     return postsIds.map(postId => {
       return (
         <div className="post" key={posts[postId].id}>
-          <h3>{posts[postId].title}</h3>
+          <Link to={`/posts/${postId}`}>
+            <h3>{posts[postId].title}</h3>
+          </Link>
           <p>{posts[postId].content}</p>
         </div>
       );
