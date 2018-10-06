@@ -1,35 +1,30 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
 export default class Header extends Component {
   render() {
     return (
       <nav className="navbar navbar-expand navbar-dark bg-dark py-3 mb-5">
         <div className="container">
-          <a className="navbar-brand pt-0" href="#">
+          <Link className="navbar-brand pt-0" to="/">
             ReduxBlog
-          </a>
+          </Link>
 
           <ul className="navbar-nav ml-auto">
-            <li className="nav-item active">
-              <a className="nav-link" href="#">
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/">
                 Home
-              </a>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
-                Features
-              </a>
+              <NavLink className="nav-link" to="/posts/new">
+                new post
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
-                Pricing
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
+              <NavLink className="nav-link" to="#">
                 About
-              </a>
+              </NavLink>
             </li>
           </ul>
         </div>
