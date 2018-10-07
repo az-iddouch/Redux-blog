@@ -12,7 +12,7 @@ export default class Header extends Component {
 
           <ul className="navbar-nav ml-auto">
             <li className="nav-item">
-              <NavLink className="nav-link" to="/">
+              <NavLink className="nav-link" exact to="/">
                 Home
               </NavLink>
             </li>
@@ -22,7 +22,7 @@ export default class Header extends Component {
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="#">
+              <NavLink className="nav-link" to="/about">
                 About
               </NavLink>
             </li>
